@@ -1,0 +1,1907 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Harmonization Information</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+<script>$(document).ready(function(){
+    if (typeof $('[data-toggle="tooltip"]').tooltip === 'function') {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    if ($('[data-toggle="popover"]').popover === 'function') {
+        $('[data-toggle="popover"]').popover();
+    }
+});
+</script>
+<style type="text/css">
+.lightable-minimal {
+border-collapse: separate;
+border-spacing: 16px 1px;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-minimal td {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal th {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal thead tr:last-child th {
+border-bottom: 2px solid #00000050;
+empty-cells: hide;
+}
+.lightable-minimal tbody tr:first-child td {
+padding-top: 0.5em;
+}
+.lightable-minimal.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-minimal.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic {
+border-top: 0.16em solid #111111;
+border-bottom: 0.16em solid #111111;
+width: 100%;
+margin-bottom: 10px;
+margin: 10px 5px;
+}
+.lightable-classic tfoot tr td {
+border: 0;
+}
+.lightable-classic tfoot tr:first-child td {
+border-top: 0.14em solid #111111;
+}
+.lightable-classic caption {
+color: #222222;
+}
+.lightable-classic td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic thead tr:last-child th {
+border-bottom: 0.10em solid #111111;
+}
+.lightable-classic.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic-2 {
+border-top: 3px double #111111;
+border-bottom: 3px double #111111;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-classic-2 tfoot tr td {
+border: 0;
+}
+.lightable-classic-2 tfoot tr:first-child td {
+border-top: 3px double #111111;
+}
+.lightable-classic-2 caption {
+color: #222222;
+}
+.lightable-classic-2 td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic-2 th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic-2 tbody tr:last-child td {
+border-bottom: 3px double #111111;
+}
+.lightable-classic-2 thead tr:last-child th {
+border-bottom: 1px solid #111111;
+}
+.lightable-classic-2.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic-2.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #EEE;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.lightable-material tfoot tr td {
+border: 0;
+}
+.lightable-material tfoot tr:first-child td {
+border-top: 1px solid #EEE;
+}
+.lightable-material th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+}
+.lightable-material td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+border-top: 1px solid #eeeeee;
+}
+.lightable-material.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #ddd;
+}
+.lightable-material-dark {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #FFFFFF12;
+border-collapse: collapse;
+margin-bottom: 10px;
+background-color: #363640;
+}
+.lightable-material-dark tfoot tr td {
+border: 0;
+}
+.lightable-material-dark tfoot tr:first-child td {
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF60;
+}
+.lightable-material-dark td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF;
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark.lightable-hover tbody tr:hover {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody tr:nth-child(even) {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material-dark.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #FFFFFF12;
+}
+.lightable-paper {
+width: 100%;
+margin-bottom: 10px;
+color: #444;
+}
+.lightable-paper tfoot tr td {
+border: 0;
+}
+.lightable-paper tfoot tr:first-child td {
+border-top: 1px solid #00000020;
+}
+.lightable-paper thead tr:last-child th {
+color: #666;
+vertical-align: bottom;
+border-bottom: 1px solid #00000020;
+line-height: 1.15em;
+padding: 10px 5px;
+}
+.lightable-paper td {
+vertical-align: middle;
+border-bottom: 1px solid #00000010;
+line-height: 1.15em;
+padding: 7px 5px;
+}
+.lightable-paper.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-paper.lightable-striped tbody tr:nth-child(even) {
+background-color: #00000008;
+}
+.lightable-paper.lightable-striped tbody td {
+border: 0;
+}
+</style>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Harmonization Information</h1>
+
+
+
+<p>One of the objectives for CTN-0094 was to harmonize data from three
+clinical trials, ctn_0027, ctn_0030, and ctn_0051. This vignette
+describes harmonization details and the identification/fixing of
+problematic values in the trial data. Every dataset in this package has
+its own documentation. To help protect the anonymity of the study
+participants two steps were taken. First, the study site information was
+modified (see the documentation for <a href="../html/site_masked.html">site_masked</a> for details). Second,
+all dates have been replace by the number of days relative to study
+consent. Therefore, some information, like the day of drug use in the
+month before enrollment is stored as negative numbers. Below, you will
+find additional details on the harmonization process. Section headings
+correspond to data sets.</p>
+<div id="all_drugs" class="section level1">
+<h1>The <code>all_drugs</code> dataset</h1>
+<p>The <code>all_drugs</code> dataset is an agglomeration of all
+self-reported drugs, drugs found in urine drug screening and alcohol
+screening in ctn_0027, ctn_0030, and ctn_0051. This data is the result
+of extensive preprocessing of free text to harmonize drug names, but
+drugs were not collapsed into groups. For example, the many
+descriptions, abbreviations, and spellings of variants of suboxone
+(e.g., “street suboxone”, “bup/nx”, “buxnx”, “bupnx”, “pbupnx”, “bupxx”)
+were harmonized into a single “suboxone” group but suboxone was not
+collapsed with other buprenorphine formulations.</p>
+<p>While there were <strong>many</strong> spellings and text variants
+(including mg and location where drug was administered), the list in <a href="#tab:final">Table 1</a> summarizes the additional text and the
+changes were made to the free text entries. Many free text entries
+included the combination of two or more drugs. In these cases, a record
+was created for each drug. For example, the free text entry of
+‘Amitiptyline &amp; Trazadone’ (literal incorrect spelling from record
+used here for example) was converted two records:
+‘Tryclic-antidepressant’ and ‘Antidepressant’.</p>
+<p id="tab:final" , style="color:gray;">
+
+Table 1: Recoded Free Text Descriptions of Drugs.
+
+</p>
+<table>
+<colgroup>
+<col width="36%" />
+<col width="63%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Original Text</th>
+<th align="left">Final Text</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">‘Acid’</td>
+<td align="left">‘Hallucinogen’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Adderall’</td>
+<td align="left">‘Amphetamine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Ambien’</td>
+<td align="left">‘Sedative-Hypnotic’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Amitiptyline &amp; Trazadone’</td>
+<td align="left">‘Tryclic-antidepressant’ &amp; ‘Antidepressant’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Angel Dust’</td>
+<td align="left">‘PCP’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Ativan’</td>
+<td align="left">‘Benzodiazepine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Baclofen’</td>
+<td align="left">‘Muscle Relaxant’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Bath Salts’</td>
+<td align="left">‘Cathinones’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Bup/Nx &amp; Tramadol’</td>
+<td align="left">‘Suboxone’ &amp; ‘Tramadol’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Cannabinoids’</td>
+<td align="left">‘THC’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Carisoprodol’</td>
+<td align="left">‘Muscle Relaxant’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Darvocet’</td>
+<td align="left">‘Propoxyphene’ &amp; ‘Acetaminophen’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘DXM’</td>
+<td align="left">‘Dextromethorphan’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Dust’</td>
+<td align="left">‘PCP’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Ecstasy’</td>
+<td align="left">‘MDMA’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Fioricet’</td>
+<td align="left">‘Barbiturate’ &amp; ‘Caffeine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Flexeral’</td>
+<td align="left">‘Muscle Relaxant’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Hallucinogens inc mdma’</td>
+<td align="left">‘Hallucinogen’ &amp; ‘MDMA’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Heroin/Opium’</td>
+<td align="left">‘Heroin’ &amp; ‘Opium’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Hydroxyzin’</td>
+<td align="left">‘Antihistamine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Keflex’</td>
+<td align="left">‘Antibiotic’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Klonopin’</td>
+<td align="left">‘Benzodiazepine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Librium Detox’</td>
+<td align="left">‘Benzodiazepine’</td>
+</tr>
+<tr class="even">
+<td align="left">‘LSD’</td>
+<td align="left">‘Hallucinogen’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Lunesta’</td>
+<td align="left">‘Sedative-Hypnotic’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Marijuana’</td>
+<td align="left">‘THC’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Meth’</td>
+<td align="left">‘Methamphetamine’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Ms Contin’</td>
+<td align="left">‘Morphine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Mushroom’</td>
+<td align="left">‘Hallucinogen’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Neurotin’</td>
+<td align="left">‘Gabapentin’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Norco’</td>
+<td align="left">‘Hydrocodone’ &amp; ‘Acetaminophen’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Participant Was Unsure Whether She Took A Percocet Or
+A Vicodin’</td>
+<td align="left">‘Opioid’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Penicilin (Not Ppt Rx)’</td>
+<td align="left">‘Antibiotic’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Penicillin - Mushrooms (Psilocybin)’</td>
+<td align="left">‘Hallucinogen’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Soma Codeine’</td>
+<td align="left">‘Muscle Relaxant’ &amp; ‘Codeine’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Somas’</td>
+<td align="left">‘Muscle Relaxant’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Percocets And Vicodin’</td>
+<td align="left">‘Oxycodone’ &amp; ‘Hydrocodone’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Percoset’</td>
+<td align="left">‘Hydrocodone’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Phenagrin’</td>
+<td align="left">‘Antiemetic’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Phenergran With Codeine’</td>
+<td align="left">‘Antiemetic’ &amp; ‘Codeine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Phenobarbi’</td>
+<td align="left">‘Barbiturate’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Promethazine, Clonidine’</td>
+<td align="left">‘Antiemetic’ &amp; ‘Clonidine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Quetiapine’</td>
+<td align="left">‘Antipsychotic’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Remeron’</td>
+<td align="left">‘Antidepressant’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Ritalin’</td>
+<td align="left">‘Methylphenidate’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Seroquel’</td>
+<td align="left">‘Antipsychotic’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Sleeping Pill’</td>
+<td align="left">‘Sedative-Hypnotic’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Snow’</td>
+<td align="left">‘Cathinones’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Speed’</td>
+<td align="left">‘Amphetamine’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Speed Ball’</td>
+<td align="left">‘Heroin’ &amp; ‘Cocaine’</td>
+</tr>
+<tr class="odd">
+<td align="left">’Spice</td>
+<td align="left">‘K2’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Subutex’</td>
+<td align="left">‘Buprenorphine’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Sudafed’</td>
+<td align="left">‘Pseuedoephidrine’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Tranquilizers’</td>
+<td align="left">‘Sedative-Hypnotic’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Trazodone(Desyrel)’</td>
+<td align="left">‘Trazodone’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Tylonol 3’</td>
+<td align="left">‘Codeine’ &amp; ‘Acetaminophen’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Tylenol PM’</td>
+<td align="left">‘Acetaminophen’ &amp; ‘Benadryl’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Ultracet’</td>
+<td align="left">‘Tramadol’ &amp; ‘Acetaminophen’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Valium’</td>
+<td align="left">‘Benzodiazepine’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Vicodin’</td>
+<td align="left">‘Hydrocodone’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Vistaril’</td>
+<td align="left">‘Antihistamine’</td>
+</tr>
+<tr class="even">
+<td align="left">‘Wet (Pcp)’</td>
+<td align="left">‘PCP’</td>
+</tr>
+<tr class="odd">
+<td align="left">‘Zolpidem’</td>
+<td align="left">‘Sedative-Hypnotic’</td>
+</tr>
+</tbody>
+</table>
+<p>The timeline-followback (TLFB) data had many dozens of typos in
+dates., nearly all of which could be fixed by looking at form completion
+dates and the dates before and after the problematic records. In
+ctn_0030, out of nearly 40 problematic dates, only one could not be
+fixed and the record was dropped. ctn_0051 stored TLFB data in two
+files. One file contained start and stop dates for the baseline TLFB
+assessment. The second contained the results for each day. These files
+were occasionally inconsistent. Five start/stop records were modified
+based on the randomization data and the dated data.</p>
+<p>Urine drug screening (UDS) records also had many date problems. In
+ctn_0027, approximately 100 records had UDS screening dates that were
+problematic. There were a dozen problematic dates in ctn_0030. All could
+be unambiguously fixed using other dated records and form date
+stamps.</p>
+<p>Self-reported drug information in the TLFB in ctn_0027 allowed for
+free-text entry of any substance. The TLFB for ctn_0030 and ctn_0051
+used structured questions to assess the use of alcohol and drugs.
+Specifically, the TLFB for ctn_0030 only checked for these drugs listed
+in <a href="#ctn3051tlfb">Table 2</a>. It allowed for
+<strong><em>free-text entry of only other opiates</em></strong>, all
+other abused substances are unknown. Frequently appearing “other
+opiates” included “Suboxone”, “Buprenorphine”, “Darvocet” and
+“Fentanyl.” CTN-51 used the more comprehensive set of drugs listed in <a href="#ctn3051tlfb">Table 2</a> and it allowed for up to two additional
+drugs per day. Frequently occurring free text drugs from ctn_0051
+included: Fioricet, Adderall, Baclofen, K2/Spice, Codeine, Fentanyl,
+Kratom, Bath Salts, Gabapentin, PCP, and Ambien.</p>
+<p id="tab:ctn3051tlfb" , style="color:gray;">
+
+Table 2: Drugs Assessed by ctn_0030 and ctn_0051 Timeline Followback Questionnaires.
+
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">substance</th>
+<th align="left">ctn_0030</th>
+<th align="left">ctn_0051</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Alcohol</td>
+<td align="left">Yes</td>
+<td align="left">Yes (Standard Drinks)</td>
+</tr>
+<tr class="even">
+<td align="left">Amphetamine</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Buprenorphine</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Ecstasy</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Sedative Barbiturates</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Sedatives other than Benzodiazepines</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">Benzodiazepines</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Cannabinoids (THC)</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Cocaine</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Crack</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Inhalants</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Methadone</td>
+<td align="left">Yes</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Methamphetamine</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">Opioid Analgesics</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="odd">
+<td align="left">Heroin</td>
+<td align="left">Heroin/Opium</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Morphine</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">Hydromorphone</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">Codeine</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">Oxycodone</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">Hydrocodone</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">Propoxyphene</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="even">
+<td align="left">Other Opiates</td>
+<td align="left">Yes</td>
+<td align="left">No</td>
+</tr>
+<tr class="odd">
+<td align="left">Other Drug 1</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+<tr class="even">
+<td align="left">Other Drug 2</td>
+<td align="left">No</td>
+<td align="left">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>A few participants (who = 116,166, 250, 934, 1331, 3325) had some
+TLFB data after the last date with treatment drug which included their
+treatment medication (buprenorphine).</p>
+<p>See <a href="../html/all_drugs.html">all_drugs</a> for additional
+details/information.</p>
+<div id="buprenorphine-details" class="section level3">
+<h3>Buprenorphine Details</h3>
+<p>ctn_0051 consistently gathered self-reported drug use and urine drug
+screening (UDS) data on buprenorphine even after it was prescribed, but
+ctn_0027 and ctn_0030 did not. In the rare cases where a subject in
+ctn_0027 and ctn_0030 self-reported taking the drugs prescribed as part
+of the trial, those records were <em>left in the dataset</em>. Analysts
+should <mark>proceed with caution</mark> because it is unclear if these
+are data entry issues or if people were supplementing their prescribed
+drugs. In ctn_0027 there were no self-reports of buprenorphine but 16
+people self-reported their methadone at least once after it was
+prescribed for them. This accounted for only 112 out of more than
+100,000 self-reported drug events in ctn_0027. In ctn_0030, suboxone use
+was self-reported, after prescription, by six people (for eight
+problematic records out of tens of thousands of drug use events).</p>
+<p>ctn_0027 did not include buprenorphine in its UDS, ctn_0030 had
+scheduled screenings for it (in phase 1 at the week 10 and 12/final
+visits and in phase 2 at the week 22 and 24/final visits) and ctn_0051
+consistently checked for it. There are many buprenorphine UDS screenings
+in ctn_0030 that were not in week 10, 12, 22 or 24 (N = 40). Nearly
+always, these seem to be duplicates of the “final visit” records.
+Analysts should <mark>proceed with caution</mark> when looking at UDS
+records for buprenorphine in ctn_0030.</p>
+</div>
+<div id="alcohol" class="section level3">
+<h3>Alcohol</h3>
+<p>The timeline followback data for ctn_0027 included free text
+descriptions of the number of alcoholic beverages consumed on a day.
+Free text included entries that ran the gamut from casual drinking
+(e.g., “1/2 beer for birthday”), through heavy drinking (e.g., “3 16oz
+beer, 1 shot hard alcohol, 1 mixed drink”), out to dangerous quantities
+(e.g., “6pk beer &amp; 1/2 gal. rum”). All entries were converted to
+standard drinks using information at the <a href="https://www.niaaa.nih.gov/alcohols-effects-health/overview-alcohol-consumption/what-standard-drink">National
+Institute on Alcohol Abuse and Alcoholism</a>, Wikipedia. Bartending
+references were used to <a href="https://www.thespruceeats.com/how-many-shots-in-a-bottle-761232">estimate
+the number of shots contained in larger containers</a>. Ambiguous
+entries like “many glasses of wine” were coded as five standard drinks.
+For women, between half a standard drink to less than four standard
+drinks was considered light drinking for a day. For men, half a standard
+drink to less than five was considered light drinking for a day. In
+ctn_0027 less than eight people were marked as drinking something on a
+particular day but no details were provided. The drinking records for
+each person were reviewed. Four people had <em>no other of alcohol
+use</em>, so these records were dropped. Three others had a history of
+light alcohol use so problematic days were marked as light drinking and
+one person had an unambiguous history of very heavy drinking, therefore
+the unknown day was marked as heavy drinking.</p>
+<p>See <a href="../html/all_drugs.html">all_drugs</a> for additional
+details/information.</p>
+</div>
+</div>
+<div id="the-asi-dataset" class="section level1">
+<h1>The <code>asi</code> dataset</h1>
+<p>See <a href="../html/asi.html">asi</a> for details/information.</p>
+</div>
+<div id="the-days-dataset" class="section level1">
+<h1>The <code>days</code> dataset</h1>
+<p>See <a href="../html/days.html">days</a> for details/information.</p>
+</div>
+<div id="the-demographics-dataset" class="section level1">
+<h1>The <code>demographics</code> dataset</h1>
+<p>See <a href="../html/demographics.html">demographics</a> for
+details/information.</p>
+</div>
+<div id="the-detox-dataset" class="section level1">
+<h1>The <code>detox</code> dataset</h1>
+<p>See <a href="../html/detox.html">detox</a> for
+details/information.</p>
+</div>
+<div id="the-everybody-dataset" class="section level1">
+<h1>The <code>everybody</code> dataset</h1>
+<p>See <a href="../html/everybody.html">everybody</a> for
+details/information.</p>
+</div>
+<div id="the-fagerstrom-dataset" class="section level1">
+<h1>The <code>fagerstrom</code> dataset</h1>
+<p>Tobacco use was not assessed in ctn_0027. ctn_0030 subjects are
+scored as being smokers or nonsmokers (in the past 30 days). ctn_0051
+assessed current smoking and the Fagerstrom Test For Nicotine Dependence
+Score.</p>
+<p>See <a href="../html/fagerstrom.html">fagerstrom</a> for additional
+details/information.</p>
+</div>
+<div id="the-first_survey-dataset" class="section level1">
+<h1>The <code>first_survey</code> dataset</h1>
+<p>See <a href="../html/first_survey.html">first_survey</a> for
+details/information.</p>
+</div>
+<div id="pain" class="section level1">
+<h1>The <code>pain</code> dataset</h1>
+<p>Baseline pain was assessed using the SF-36 in ctn_0027 and ctn_0030
+and using the EuroQoL in CTN-51. SF-36 responses to the question “How
+much bodily pain have you had during the past 4 weeks?” were aggregated
+into three categories “No Pain”, “Very mild to Moderate Pain”, “Severe
+Pain”. The EuroQoL as ask respondents to rank “Pain/discomfort” in one
+of three categories. These levels were labeled using the same categories
+described above.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">SF-36 Original Response</th>
+<th align="left">Grouped Response</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">None</td>
+<td align="left">None</td>
+</tr>
+<tr class="even">
+<td align="left">Very mild</td>
+<td align="left">Very mild to Moderate Pain</td>
+</tr>
+<tr class="odd">
+<td align="left">Mild</td>
+<td align="left">Very mild to Moderate Pain</td>
+</tr>
+<tr class="even">
+<td align="left">Moderate</td>
+<td align="left">Very mild to Moderate Pain</td>
+</tr>
+<tr class="odd">
+<td align="left">Severe</td>
+<td align="left">Severe Pain</td>
+</tr>
+<tr class="even">
+<td align="left">Very Severe</td>
+<td align="left">Severe Pain</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left">EuroQoL Original Response</th>
+<th align="left">Grouped Response</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">I have no pain or discomfort</td>
+<td align="left">None</td>
+</tr>
+<tr class="even">
+<td align="left">I have moderate pain or discomfort</td>
+<td align="left">Very mild to Moderate Pain</td>
+</tr>
+<tr class="odd">
+<td align="left">I have extreme pain or discomfort</td>
+<td align="left">Severe Pain</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="psychiatric" class="section level1">
+<h1>The <code>psychiatric</code> dataset</h1>
+<p>The medical history assessment for all three trails included:
+schizophrenia, depression, bipolar disorder, anxiety (anxiety was
+grouped with panic disorder in ctn_0027 and ctn_0030), brain damage, and
+epilepsy.</p>
+<p>While ctn_0027 and ctn_0030 gathered psychiatric symptoms using DSM-4
+criteria, ctn_0051 used DSM-5 criteria. CTN-027 checked for diagnosis of
+dependency on opiates, alcohol, amphetamines, cannabis, cocaine,
+sedatives, benzodiazepines, and dependence on other depressants, or
+dependence on other stimulants. ctn_0030 only scored people as having a
+diagnosis of dependency on opiates.</p>
+</div>
+<div id="the-randomization-dataset" class="section level1">
+<h1>The <code>randomization</code> dataset</h1>
+<p>See <a href="../html/randomization.html">randomization</a> for
+details/information.</p>
+</div>
+<div id="rbs" class="section level1">
+<h1>The <code>rbs</code> dataset</h1>
+<p>ctn_0027 and ctn_0030 assessed drug use as the count of days out of
+the last 30 that drugs (cocaine, heroin alone, speedball, opiate,
+amphetamine) were used ctn_0051 assessed the number of days of drug use
+on an ordinal scale which was converted to number of days. The
+conversion is show in <a href="#tab:ivdays">Table 3</a>.</p>
+<p id="tab:ivdays" , style="color:gray;">
+Table 3: Estimated Days of Drug Use Based on ctn_0051 Categories
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Reported amount</th>
+<th align="left">Days of Use Per Month</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Not at all</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">A few times</td>
+<td align="left">4</td>
+</tr>
+<tr class="odd">
+<td align="left">A few times each week</td>
+<td align="left">14</td>
+</tr>
+<tr class="even">
+<td align="left">Every day</td>
+<td align="left">30</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="the-rbs_iv-dataset" class="section level1">
+<h1>The <code>rbs_iv</code> dataset</h1>
+<p>See <a href="../html/rbs_iv.html">rbs_iv</a> for
+details/information.</p>
+</div>
+<div id="the-screening_date-dataset" class="section level1">
+<h1>The <code>screening_date</code> dataset</h1>
+<p>See <a href="../html/screening_date.html">screening_date</a> for
+details/information.</p>
+</div>
+<div id="the-sex-dataset" class="section level1">
+<h1>The <code>sex</code> dataset</h1>
+<p>See <a href="../html/sex.html">sex</a> for details/information.</p>
+</div>
+<div id="tlfb" class="section level1">
+<h1>The <code>tlfb</code> dataset</h1>
+<p>These are drugs that were self-reported. Some of the drugs listed in
+the <a href="#all_drugs">all_drugs</a> file have been grouped. Note the
+“medical use” opioids are grouped as “Opioid” but “Heroin” and “Opium”
+are grouped together as “Heroin”.</p>
+<p id="tab:tlfb" , style="color:gray;">
+
+Table 4: Drug Groupings Used in the tflb File.
+
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><em>all_drugs</em> Description</th>
+<th align="left"><em>tlfb</em> After Grouping</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Acetaminophen</td>
+<td align="left">Analgesic</td>
+</tr>
+<tr class="even">
+<td align="left">Amphetamine</td>
+<td align="left">Amphetamine</td>
+</tr>
+<tr class="odd">
+<td align="left">Barbiturate</td>
+<td align="left">Sedatives</td>
+</tr>
+<tr class="even">
+<td align="left">Codeine</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Crack</td>
+<td align="left">Cocaine</td>
+</tr>
+<tr class="even">
+<td align="left">Fentanyl</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Heroin</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="even">
+<td align="left">Gabapentin</td>
+<td align="left">Analgesic</td>
+</tr>
+<tr class="odd">
+<td align="left">Hydrocodone</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="even">
+<td align="left">Hydromorphone</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Mdma</td>
+<td align="left">MDMA/hallucinogen</td>
+</tr>
+<tr class="even">
+<td align="left">Merperidine</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Methamphetamine</td>
+<td align="left">Amphetamine</td>
+</tr>
+<tr class="even">
+<td align="left">Morphine</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Muscle Relaxant</td>
+<td align="left">Analgesic</td>
+</tr>
+<tr class="even">
+<td align="left">Nalbuphine</td>
+<td align="left">Analgesic</td>
+</tr>
+<tr class="odd">
+<td align="left">Opium</td>
+<td align="left">Heroin</td>
+</tr>
+<tr class="even">
+<td align="left">Oxycodone</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Oxymorphone</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="even">
+<td align="left">Propoxyphene</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Suboxone</td>
+<td align="left">Buprenorphine</td>
+</tr>
+<tr class="even">
+<td align="left">Sedative-Hypnotic</td>
+<td align="left">Sedatives</td>
+</tr>
+<tr class="odd">
+<td align="left">Thc</td>
+<td align="left">Thc</td>
+</tr>
+<tr class="even">
+<td align="left">Tramadol</td>
+<td align="left">Opioid</td>
+</tr>
+<tr class="odd">
+<td align="left">Trazodone</td>
+<td align="left">Antidepressant</td>
+</tr>
+<tr class="even">
+<td align="left">Tryclic-Antidepressant</td>
+<td align="left">Antidepressant</td>
+</tr>
+</tbody>
+</table>
+<p>A few participants (who = 116, 166, 250, 934, 1331, 3325) had some
+TLFB data after the last date on the dispensed study drug which included
+their treatment medication (buprenorphine). All treatment drug records
+have been removed from the <code>tlfb</code> file but they remain in
+<code>all_drugs</code>.</p>
+<p>See the section <a href="#all_drugs">all_drugs</a> for additional
+details.</p>
+</div>
+<div id="the-treatment-dataset" class="section level1">
+<h1>The <code>treatment</code> dataset</h1>
+<p>The date information for administration of treatment drugs required
+<em>extensive</em> processing to find and fix problematic dates. Many
+algorithms were used to identify problems. These included:</p>
+<ol style="list-style-type: decimal">
+<li>treatment dates far before randomization</li>
+<li>identifying dates past the end of the study period</li>
+<li>duplicate dates</li>
+</ol>
+<p>When such problematic dates were identified, the data were manually
+reviewed to try to find gaps in the medication history. Nearly always
+the values were found to be typos in the year and month. In these cases,
+the dates were fixed. ctn_0027 had more than 250 such typos and all but
+10 could be fixed unambiguously. ctn_0030 had approximately two dozen
+such typos, two of which could not be fixed. The records which could not
+be fixed were dropped. One person in ctn_0030 had multiple drug records
+for the same date. The lower mg records were deleted.</p>
+<p>Further ctn_0027 had approximately 100 data entry problems
+mislabeling the drug administered on random days. That is, in the source
+data, subjects were listed as receiving a single dose of methadone, with
+the mg appropriate for buprenorphine, in the middle of dozens or
+hundreds of doses of buprenorphine. Similar mistakes happened for people
+receiving methadone. These mislabeling mistakes were fixed.</p>
+</div>
+<div id="uds" class="section level1">
+<h1>The <code>uds</code> dataset</h1>
+<p>The Urine Drug Screening (UDS) protocols were not identical across
+the three trials. In <a href="#tab:uds">Table 5</a> shows the details of
+what was tested. Note that this table has many opiates grouped into an
+“Opioid” category and both Amphetamine and Methamphetamine are grouped
+as “Amphetamine”. The not-grouped data can be found in the
+<code>all_drugs</code> table.</p>
+<p id="tab:uds" , style="color:gray;">
+
+Table 5: Drugs Assessed in UDS for Trials with Grouping Categories.
+
+</p>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Substance
+</th>
+<th style="text-align:left;">
+CTN-0027
+</th>
+<th style="text-align:left;">
+CTN-0030
+</th>
+<th style="text-align:left;">
+CTN-0051
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Alcohol
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Alcohol</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Amphetamine
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Amphetamine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Amphetamine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Amphetamine</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Barbiturate
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Barbiturate</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Benzodiazepine
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Benzodiazepine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Benzodiazepine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Benzodiazepine</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Buprenorphine
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Buprenorphine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Buprenorphine</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cannabinoids
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">THC</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">THC</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">THC</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Cocaine
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Cocaine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Cocaine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Cocaine</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Methadone
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Methadone</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Methadone</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Methadone</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Methamphetamine
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Amphetamine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Amphetamine</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Amphetamine</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Opiate 300
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Opiate 2000
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Oxycodone
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Propoxyphene
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: black !important;">Opioid</span>
+</td>
+<td style="text-align:left;">
+<span style="     color: red !important;">NO</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>See the section <a href="#all_drugs">all_drugs</a> for additional
+details.</p>
+</div>
+<div id="the-visit-dataset" class="section level1">
+<h1>The <code>visit</code> dataset</h1>
+<p>Missed visits in ctn_0027 as missing the appointment dates but they
+have the visit week.</p>
+<p>ctn_0027 and ctn_0030 logged reasons for missed appointments as free
+text. ctn_0051 categorized reasons for missing appointments into 10
+groups plus an “Other” categorized. All reasons were harmonized into a
+set 14 excuse categories. The free text was scanned for key
+words/phrases (including frequently occurring misspellings) and these
+were converted into the indicator variables shown in <a href="#tab:excuse">Table 6</a>.</p>
+<p id="tab:excuse" , style="color:gray;">
+
+Table 6: Reasons for Not Attending Appointments.  
+
+</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Key Words</th>
+<th align="left">Category</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">‘deceased’</td>
+<td align="left">Dead</td>
+</tr>
+<tr class="even">
+<td align="left">‘no show’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="odd">
+<td align="left">‘no-show’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="even">
+<td align="left">‘not show’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="odd">
+<td align="left">‘no visit’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="even">
+<td align="left">‘Missed visit’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="odd">
+<td align="left">‘MIA’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="even">
+<td align="left">‘did not attend’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="odd">
+<td align="left">‘never showed’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="even">
+<td align="left">‘did not contact’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="odd">
+<td align="left">‘abscent’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="even">
+<td align="left">‘Absent’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="odd">
+<td align="left">‘unable to contact’</td>
+<td align="left">No Show</td>
+</tr>
+<tr class="even">
+<td align="left">‘no funding’</td>
+<td align="left">No Funding</td>
+</tr>
+<tr class="odd">
+<td align="left">‘left study’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="even">
+<td align="left">‘terminated’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="odd">
+<td align="left">‘withdraw’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="even">
+<td align="left">‘withdrew’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="odd">
+<td align="left">‘withdrawn’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="even">
+<td align="left">‘did not schedule’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="odd">
+<td align="left">‘drop out’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="even">
+<td align="left">‘early term’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="odd">
+<td align="left">‘out of the study’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="even">
+<td align="left">‘Pt dropped out’</td>
+<td align="left">Left Study</td>
+</tr>
+<tr class="odd">
+<td align="left">‘prison’</td>
+<td align="left">In Jail</td>
+</tr>
+<tr class="even">
+<td align="left">‘jail’</td>
+<td align="left">In Jail</td>
+</tr>
+<tr class="odd">
+<td align="left">‘incarcerated’</td>
+<td align="left">In Jail</td>
+</tr>
+<tr class="even">
+<td align="left">‘forgot’</td>
+<td align="left">Forgot</td>
+</tr>
+<tr class="odd">
+<td align="left">‘hospital’</td>
+<td align="left">In Hospital</td>
+</tr>
+<tr class="even">
+<td align="left">‘illness’</td>
+<td align="left">Illness</td>
+</tr>
+<tr class="odd">
+<td align="left">‘moved’</td>
+<td align="left">Moved</td>
+</tr>
+<tr class="even">
+<td align="left">‘14’</td>
+<td align="left">Missing 14 Consecutive Appointments</td>
+</tr>
+<tr class="odd">
+<td align="left">‘window’</td>
+<td align="left">Study Window</td>
+</tr>
+<tr class="even">
+<td align="left">‘unable to attend visit’</td>
+<td align="left">Unable</td>
+</tr>
+<tr class="odd">
+<td align="left">‘vacation’</td>
+<td align="left">On Vacation</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="the-withdrawal-dataset" class="section level1">
+<h1>The <code>withdrawal</code> dataset</h1>
+<p>Note that ctn_0027 and ctn_0030 used the Clinical Opiate Withdrawal
+Scale (COWS) and ctn_0051 used the Subjective Opiate Withdrawal Scale
+(SOWS) to assess withdrawal symptoms. While COWS makes a distinction
+between moderately severe and severe withdrawal, SOWS does not.
+Therefore, we combine the severe and moderately severe categories and
+label them as “severe”.</p>
+<div id="ctn-27" class="section level3">
+<h3>CTN 27</h3>
+<p>The Clinical Opiate Withdrawal Scale (COWS)</p>
+<pre><code>    select;
+        when(score &gt;= 37) withdrawl = 3; * severe;
+        when(score &gt;= 25) withdrawl = 3; * moderately severe same as severe;
+        when(score &gt;= 13) withdrawl = 2; * moderate;
+        when(score &gt;= 5)  withdrawl = 1; * mild;
+        when(score &gt;= 0)  withdrawl = 0; * none;
+    end;</code></pre>
+</div>
+<div id="ctn-30" class="section level3">
+<h3>CTN 30</h3>
+<p>The Clinical Opiate Withdrawal Scale (COWS)</p>
+<pre><code>    select;
+        when(score &gt;= 37) withdrawl = 3; * severe;
+        when(score &gt;= 25) withdrawl = 3; * moderately severe same as severe;
+        when(score &gt;= 13) withdrawl = 2; * moderate;
+        when(score &gt;= 5)  withdrawl = 1; * mild;
+        when(score &gt;= 0)  withdrawl = 0; * none; 
+    end;</code></pre>
+</div>
+<div id="ctn-51" class="section level3">
+<h3>CTN 51</h3>
+<p>Subjective Opiate Withdrawal Scale (SOWS)</p>
+<pre><code>        select;
+            when (score &gt;= 21) withdrawl = 3; * severe;
+            when (score &gt;= 11) withdrawl = 2; * moderate;
+            when (score &gt;= 1)  withdrawl = 1; * mild;
+            when (score = 0)   withdrawl = 0; * none;
+            when (score = .)   withdrawl = .;
+        end;</code></pre>
+</div>
+</div>
+<div id="the-withdrawal_pre_post-dataset" class="section level1">
+<h1>The <code>withdrawal_pre_post</code> dataset</h1>
+<p>See <a href="../html/withdrawal_pre_post.html">withdrawal_pre_post</a> for
+details/information.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&gt; R version 4.3.1 (2023-06-16)</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&gt; Platform: x86_64-apple-darwin20 (64-bit)</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&gt; Running under: macOS Monterey 12.6.9</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co">#&gt; Matrix products: default</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co">#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib </span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a><span class="co">#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="co">#&gt; locale:</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="co">#&gt; [1] C/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a><span class="co">#&gt; time zone: America/New_York</span></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a><span class="co">#&gt; tzcode source: internal</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a><span class="co">#&gt; attached base packages:</span></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a><span class="co">#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     </span></span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a><span class="co">#&gt; other attached packages:</span></span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a><span class="co">#&gt;  [1] public.ctn0094data_1.0.6 psych_2.3.6              infer_1.0.4             </span></span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a><span class="co">#&gt;  [4] janitor_2.2.0            kableExtra_1.3.4         broom_1.0.5             </span></span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a><span class="co">#&gt;  [7] DiagrammeR_1.0.10        table1_1.4.3             ggthemes_4.2.4          </span></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a><span class="co">#&gt; [10] forcats_1.0.0            tibble_3.2.1             ggplot2_3.4.2           </span></span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a><span class="co">#&gt; [13] dplyr_1.1.2              conflicted_1.2.0        </span></span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a><span class="co">#&gt; </span></span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a><span class="co">#&gt; loaded via a namespace (and not attached):</span></span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a><span class="co">#&gt;  [1] gtable_0.3.3       xfun_0.39          bslib_0.5.0        htmlwidgets_1.6.2 </span></span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a><span class="co">#&gt;  [5] visNetwork_2.1.2   lattice_0.21-8     vctrs_0.6.3        tools_4.3.1       </span></span>
+<span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a><span class="co">#&gt;  [9] generics_0.1.3     parallel_4.3.1     fansi_1.0.4        pkgconfig_2.0.3   </span></span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a><span class="co">#&gt; [13] RColorBrewer_1.1-3 webshot_0.5.5      lifecycle_1.0.3    compiler_4.3.1    </span></span>
+<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a><span class="co">#&gt; [17] stringr_1.5.0      munsell_0.5.0      mnormt_2.1.1       snakecase_0.11.1  </span></span>
+<span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a><span class="co">#&gt; [21] htmltools_0.5.5    sass_0.4.6         yaml_2.3.7         Formula_1.2-5     </span></span>
+<span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a><span class="co">#&gt; [25] pillar_1.9.0       jquerylib_0.1.4    tidyr_1.3.0        cachem_1.0.8      </span></span>
+<span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a><span class="co">#&gt; [29] nlme_3.1-162       tidyselect_1.2.0   rvest_1.0.3        digest_0.6.32     </span></span>
+<span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a><span class="co">#&gt; [33] stringi_1.7.12     purrr_1.0.1        fastmap_1.1.1      grid_4.3.1        </span></span>
+<span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a><span class="co">#&gt; [37] colorspace_2.1-0   cli_3.6.1          magrittr_2.0.3     utf8_1.2.3        </span></span>
+<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a><span class="co">#&gt; [41] withr_2.5.0        scales_1.2.1       backports_1.4.1    lubridate_1.9.2   </span></span>
+<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a><span class="co">#&gt; [45] timechange_0.2.0   rmarkdown_2.22     httr_1.4.6         memoise_2.0.1     </span></span>
+<span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a><span class="co">#&gt; [49] evaluate_0.21      knitr_1.43         viridisLite_0.4.2  rlang_1.1.1       </span></span>
+<span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a><span class="co">#&gt; [53] glue_1.6.2         xml2_1.3.4         svglite_2.1.1      rstudioapi_0.14   </span></span>
+<span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a><span class="co">#&gt; [57] jsonlite_1.8.5     R6_2.5.1           systemfonts_1.0.4</span></span></code></pre></div>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

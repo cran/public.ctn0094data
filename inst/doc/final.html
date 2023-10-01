@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="CTN-0094 Team" />
+
+<meta name="date" content="2023-09-29" />
+
+<title>Final Report CTN-0094</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+<style type="text/css">
+.Rtable1 table, table.Rtable1 {
+font-family: "Arial", Arial, sans-serif;
+font-size: 10pt;
+border-collapse: collapse;
+padding: 0px;
+margin: 0px;
+
+}
+.Rtable1 td {
+white-space:nowrap;
+}
+.Rtable1 th, .Rtable1 td {
+border: 0;
+text-align: center;
+padding: 0.5ex 1.5ex;
+margin: 0px;
+}
+.Rtable1 thead>tr:first-child>th {
+border-top: 2pt solid black;
+}
+.Rtable1 thead>tr:last-child>th {
+border-bottom: 1pt solid black;
+}
+.Rtable1 tbody>tr:last-child>td {
+border-bottom: 2pt solid black;
+}
+.Rtable1 th.grouplabel {
+padding-left: 0;
+padding-right: 0;
+}
+.Rtable1 th.grouplabel>div {
+margin-left: 1.5ex;
+margin-right: 1.5ex;
+border-bottom: 1pt solid black;
+}
+.Rtable1 th.grouplabel:last-child>div {
+margin-right: 0;
+}
+.Rtable1 .rowlabel {
+text-align: left;
+padding-left: 2.5ex;
+}
+.Rtable1 .firstrow.rowlabel {
+padding-left: 0.5ex;
+font-weight: bold;
+}
+
+.Rtable1-zebra tbody tr:nth-child(odd) {
+background-color: #eee;
+}
+
+table.Rtable1-times {
+font-family: "Times New Roman", Times, serif;
+}
+
+.Rtable1-shade th {
+background-color: #ccc;
+}
+
+.Rtable1-grid th, .Rtable1-grid td {
+border-left: 1pt solid black;
+border-right: 1pt solid black;
+}
+.Rtable1-grid thead>tr:first-child>th {
+border-top: 1pt solid black;
+}
+.Rtable1-grid thead>tr:last-child>th {
+border-bottom: 1pt solid black;
+}
+.Rtable1-grid tbody>tr:last-child>td {
+border-bottom: 1pt solid black;
+}
+.Rtable1-grid .firstrow, .Rtable1-grid .firstrow ~ td {
+border-top: 1pt solid black;
+}
+.Rtable1-grid th.grouplabel>div {
+margin-left: 0;
+margin-right: 0;
+border-bottom: 0;
+}
+
+.Rtable1-center td.rowlabel, .Rtable1-center td.firstrow.rowlabel {
+font-weight: bold;
+text-align: center;
+padding: 0.5ex 1.5ex;
+}
+
+.Rtable1 .Rtable1-footnote {
+font-size: smaller;
+padding: 0px;
+margin: 0px;
+text-align: left;
+white-space: normal;
+}
+</style>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Final Report CTN-0094</h1>
+<h4 class="author">CTN-0094 Team</h4>
+<h4 class="date">2023-09-29</h4>
+
+
+<div id="TOC">
+<ul>
+<li><a href="#table-1" id="toc-table-1">Table 1</a></li>
+<li><a href="#table-2" id="toc-table-2">Table 2</a></li>
+<li><a href="#table-3" id="toc-table-3">Table 3</a></li>
+</ul>
+</div>
+
+<div id="table-1" class="section level1">
+<h1>Table 1</h1>
+<p>Harmonized demographics data from the three National Drug Treatment
+Clinical Trials Network (CTN) opioid use disorder treatment trials
+(CTN-0027, CTN-0030, CTN-0051, , N= 2492)</p>
+<div class="Rtable1"><table class="Rtable1">
+<thead>
+<tr>
+<th class="rowlabel firstrow lastrow"></th>
+<th class="firstrow lastrow"><span class="stratlabel">27<br><span class="stratn">(N=1269)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">30<br><span class="stratn">(N=653)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">51<br><span class="stratn">(N=570)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">Overall<br><span class="stratn">(N=2492)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="rowlabel firstrow">Sex</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Hispanic</td>
+<td>206 (16.2%)</td>
+<td>31 (4.7%)</td>
+<td>99 (17.4%)</td>
+<td>336 (13.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Not Hispanic</td>
+<td class="lastrow">1063 (83.8%)</td>
+<td class="lastrow">622 (95.3%)</td>
+<td class="lastrow">471 (82.6%)</td>
+<td class="lastrow">2156 (86.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">Age</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Mean (SD)</td>
+<td>36.9 (11.1)</td>
+<td>32.7 (10.2)</td>
+<td>33.9 (9.63)</td>
+<td>35.1 (10.7)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Median [Min, Max]</td>
+<td class="lastrow">35.0 [18.0, 67.0]</td>
+<td class="lastrow">30.0 [18.0, 77.0]</td>
+<td class="lastrow">31.0 [19.0, 67.0]</td>
+<td class="lastrow">33.0 [18.0, 77.0]</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">Ethnicity</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Hispanic</td>
+<td>206 (16.2%)</td>
+<td>31 (4.7%)</td>
+<td>99 (17.4%)</td>
+<td>336 (13.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Not Hispanic</td>
+<td>1063 (83.8%)</td>
+<td>622 (95.3%)</td>
+<td>471 (82.6%)</td>
+<td>2156 (86.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Refused/Missing</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">Race</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Refused/Missing</td>
+<td>6 (0.5%)</td>
+<td>1 (0.2%)</td>
+<td>6 (1.1%)</td>
+<td>13 (0.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Black</td>
+<td>128 (10.1%)</td>
+<td>21 (3.2%)</td>
+<td>73 (12.8%)</td>
+<td>222 (8.9%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Other</td>
+<td>229 (18.0%)</td>
+<td>35 (5.4%)</td>
+<td>70 (12.3%)</td>
+<td>334 (13.4%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">White</td>
+<td class="lastrow">906 (71.4%)</td>
+<td class="lastrow">596 (91.3%)</td>
+<td class="lastrow">421 (73.9%)</td>
+<td class="lastrow">1923 (77.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">Education</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">HS/GED</td>
+<td>59 (4.6%)</td>
+<td>253 (38.7%)</td>
+<td>228 (40.0%)</td>
+<td>540 (21.7%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Less than HS</td>
+<td>45 (3.5%)</td>
+<td>102 (15.6%)</td>
+<td>123 (21.6%)</td>
+<td>270 (10.8%)</td>
+</tr>
+<tr>
+<td class="rowlabel">More than HS</td>
+<td>59 (4.6%)</td>
+<td>298 (45.6%)</td>
+<td>219 (38.4%)</td>
+<td>576 (23.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing</td>
+<td class="lastrow">1106 (87.2%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">1106 (44.4%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">Relationship Status</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Married or Partnered</td>
+<td>26 (2.0%)</td>
+<td>186 (28.5%)</td>
+<td>55 (9.6%)</td>
+<td>267 (10.7%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Never married</td>
+<td>88 (6.9%)</td>
+<td>326 (49.9%)</td>
+<td>392 (68.8%)</td>
+<td>806 (32.3%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Separated/Divorced/Widowed</td>
+<td>48 (3.8%)</td>
+<td>139 (21.3%)</td>
+<td>123 (21.6%)</td>
+<td>310 (12.4%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing</td>
+<td class="lastrow">1107 (87.2%)</td>
+<td class="lastrow">2 (0.3%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">1109 (44.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">Employment</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Full Time</td>
+<td>69 (5.4%)</td>
+<td>411 (62.9%)</td>
+<td>268 (47.0%)</td>
+<td>748 (30.0%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Other</td>
+<td>7 (0.6%)</td>
+<td>16 (2.5%)</td>
+<td>24 (4.2%)</td>
+<td>47 (1.9%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Part Time</td>
+<td>34 (2.7%)</td>
+<td>116 (17.8%)</td>
+<td>116 (20.4%)</td>
+<td>266 (10.7%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Student</td>
+<td>1 (0.1%)</td>
+<td>28 (4.3%)</td>
+<td>10 (1.8%)</td>
+<td>39 (1.6%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Unemployed</td>
+<td>52 (4.1%)</td>
+<td>82 (12.6%)</td>
+<td>151 (26.5%)</td>
+<td>285 (11.4%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing</td>
+<td class="lastrow">1106 (87.2%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">1 (0.2%)</td>
+<td class="lastrow">1107 (44.4%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">Usual Living Arragements</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Stable</td>
+<td>153 (12.1%)</td>
+<td>651 (99.7%)</td>
+<td>534 (93.7%)</td>
+<td>1338 (53.7%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Not Stable</td>
+<td>9 (0.7%)</td>
+<td>2 (0.3%)</td>
+<td>36 (6.3%)</td>
+<td>47 (1.9%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Refused/Missing</td>
+<td class="lastrow">1107 (87.2%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">1107 (44.4%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="table-2" class="section level1">
+<h1>Table 2</h1>
+<p>Harmonized Urine Drug Screen (UDS) data from the three National Drug
+Treatment Clinical Trials Network (CTN) opioid use disorder treatment
+trials</p>
+<div class="Rtable1"><table class="Rtable1">
+<thead>
+<tr>
+<th class="rowlabel firstrow lastrow"></th>
+<th class="firstrow lastrow"><span class="stratlabel">27<br><span class="stratn">(N=26721)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">30<br><span class="stratn">(N=10364)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">51<br><span class="stratn">(N=10258)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">Overall<br><span class="stratn">(N=47343)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="rowlabel firstrow">Substance</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Amphetamine</td>
+<td>1150 (4.3%)</td>
+<td>254 (2.5%)</td>
+<td>310 (3.0%)</td>
+<td>1714 (3.6%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Benzodiazepine</td>
+<td>3089 (11.6%)</td>
+<td>2049 (19.8%)</td>
+<td>1116 (10.9%)</td>
+<td>6254 (13.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Cocaine</td>
+<td>6595 (24.7%)</td>
+<td>704 (6.8%)</td>
+<td>800 (7.8%)</td>
+<td>8099 (17.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Methamphetamine</td>
+<td>1462 (5.5%)</td>
+<td>177 (1.7%)</td>
+<td>308 (3.0%)</td>
+<td>1947 (4.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Opioid</td>
+<td>8317 (31.1%)</td>
+<td>1850 (17.9%)</td>
+<td>1111 (10.8%)</td>
+<td>11278 (23.8%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Oxycodone</td>
+<td>947 (3.5%)</td>
+<td>2508 (24.2%)</td>
+<td>151 (1.5%)</td>
+<td>3606 (7.6%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Propoxyphene</td>
+<td>173 (0.6%)</td>
+<td>164 (1.6%)</td>
+<td>0 (0%)</td>
+<td>337 (0.7%)</td>
+</tr>
+<tr>
+<td class="rowlabel">THC</td>
+<td>4988 (18.7%)</td>
+<td>2284 (22.0%)</td>
+<td>1795 (17.5%)</td>
+<td>9067 (19.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Buprenorphine</td>
+<td>0 (0%)</td>
+<td>374 (3.6%)</td>
+<td>4420 (43.1%)</td>
+<td>4794 (10.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Barbiturate</td>
+<td>0 (0%)</td>
+<td>0 (0%)</td>
+<td>227 (2.2%)</td>
+<td>227 (0.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">MDMA</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">20 (0.2%)</td>
+<td class="lastrow">20 (0.0%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="Rtable1"><table class="Rtable1">
+<thead>
+<tr>
+<th class="rowlabel firstrow lastrow"></th>
+<th class="firstrow lastrow"><span class="stratlabel">27<br><span class="stratn">(N=20961)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">30<br><span class="stratn">(N=6287)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">51<br><span class="stratn">(N=8638)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">Overall<br><span class="stratn">(N=35886)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="rowlabel firstrow">Temperature In Range</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>25 (0.1%)</td>
+<td>16 (0.3%)</td>
+<td>40 (0.5%)</td>
+<td>81 (0.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>20732 (98.9%)</td>
+<td>6242 (99.3%)</td>
+<td>8598 (99.5%)</td>
+<td>35572 (99.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing</td>
+<td class="lastrow">204 (1.0%)</td>
+<td class="lastrow">29 (0.5%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">233 (0.6%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="table-3" class="section level1">
+<h1>Table 3</h1>
+<p>Medical and Psychiatric Co-Morbidities in the three National Drug
+Treatment Clinical Trials Network (CTN) opioid use disorder treatment
+trials</p>
+<div class="Rtable1"><table class="Rtable1">
+<thead>
+<tr>
+<th class="rowlabel firstrow lastrow"></th>
+<th class="firstrow lastrow"><span class="stratlabel">27<br><span class="stratn">(N=1269)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">30<br><span class="stratn">(N=653)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">51<br><span class="stratn">(N=570)</span></span></th>
+<th class="firstrow lastrow"><span class="stratlabel">Overall<br><span class="stratn">(N=2492)</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="rowlabel firstrow">History of Schiziphrenia</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>32 (2.5%)</td>
+<td>8 (1.2%)</td>
+<td>7 (1.2%)</td>
+<td>47 (1.9%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>1235 (97.3%)</td>
+<td>645 (98.8%)</td>
+<td>563 (98.8%)</td>
+<td>2443 (98.0%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">2 (0.2%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">2 (0.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">History of Major Depression</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>352 (27.7%)</td>
+<td>215 (32.9%)</td>
+<td>179 (31.4%)</td>
+<td>746 (29.9%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>917 (72.3%)</td>
+<td>438 (67.1%)</td>
+<td>391 (68.6%)</td>
+<td>1746 (70.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">History of Bipolar Disorder</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>147 (11.6%)</td>
+<td>37 (5.7%)</td>
+<td>79 (13.9%)</td>
+<td>263 (10.6%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>1121 (88.3%)</td>
+<td>615 (94.2%)</td>
+<td>491 (86.1%)</td>
+<td>2227 (89.4%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">1 (0.1%)</td>
+<td class="lastrow">1 (0.2%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">2 (0.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">History of Anxiety/Panic Disorder</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>382 (30.1%)</td>
+<td>204 (31.2%)</td>
+<td>257 (45.1%)</td>
+<td>843 (33.8%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>886 (69.8%)</td>
+<td>448 (68.6%)</td>
+<td>313 (54.9%)</td>
+<td>1647 (66.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">1 (0.1%)</td>
+<td class="lastrow">1 (0.2%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">2 (0.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">History of Brain Damage</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>115 (9.1%)</td>
+<td>119 (18.2%)</td>
+<td>69 (12.1%)</td>
+<td>303 (12.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>1151 (90.7%)</td>
+<td>534 (81.8%)</td>
+<td>501 (87.9%)</td>
+<td>2186 (87.7%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">3 (0.2%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">3 (0.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">History of Epilepsy</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>40 (3.2%)</td>
+<td>22 (3.4%)</td>
+<td>49 (8.6%)</td>
+<td>111 (4.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>1229 (96.8%)</td>
+<td>631 (96.6%)</td>
+<td>521 (91.4%)</td>
+<td>2381 (95.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">DSM Opiate Diagnosis</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>1268 (99.9%)</td>
+<td>653 (100%)</td>
+<td>570 (100%)</td>
+<td>2491 (100.0%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>1 (0.1%)</td>
+<td>0 (0%)</td>
+<td>0 (0%)</td>
+<td>1 (0.0%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">0 (0%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">DSM Alcohol Diagnosis</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>251 (19.8%)</td>
+<td>0 (0%)</td>
+<td>159 (27.9%)</td>
+<td>410 (16.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>843 (66.4%)</td>
+<td>0 (0%)</td>
+<td>411 (72.1%)</td>
+<td>1254 (50.3%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">175 (13.8%)</td>
+<td class="lastrow">653 (100%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">828 (33.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">DSM Amphetamine Diagnosis</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>120 (9.5%)</td>
+<td>0 (0%)</td>
+<td>106 (18.6%)</td>
+<td>226 (9.1%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>974 (76.8%)</td>
+<td>0 (0%)</td>
+<td>464 (81.4%)</td>
+<td>1438 (57.7%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">175 (13.8%)</td>
+<td class="lastrow">653 (100%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">828 (33.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">DSM Cannabis Diagnosis</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>223 (17.6%)</td>
+<td>0 (0%)</td>
+<td>163 (28.6%)</td>
+<td>386 (15.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>871 (68.6%)</td>
+<td>0 (0%)</td>
+<td>407 (71.4%)</td>
+<td>1278 (51.3%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">175 (13.8%)</td>
+<td class="lastrow">653 (100%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">828 (33.2%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">DSM Cocaine Diagnosis</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>357 (28.1%)</td>
+<td>0 (0%)</td>
+<td>175 (30.7%)</td>
+<td>532 (21.3%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>737 (58.1%)</td>
+<td>0 (0%)</td>
+<td>394 (69.1%)</td>
+<td>1131 (45.4%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">175 (13.8%)</td>
+<td class="lastrow">653 (100%)</td>
+<td class="lastrow">1 (0.2%)</td>
+<td class="lastrow">829 (33.3%)</td>
+</tr>
+<tr>
+<td class="rowlabel firstrow">DSM Sedatives Diagnosis</td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+<td class="firstrow"></td>
+</tr>
+<tr>
+<td class="rowlabel">Yes</td>
+<td>153 (12.1%)</td>
+<td>0 (0%)</td>
+<td>153 (26.8%)</td>
+<td>306 (12.3%)</td>
+</tr>
+<tr>
+<td class="rowlabel">No</td>
+<td>941 (74.2%)</td>
+<td>0 (0%)</td>
+<td>417 (73.2%)</td>
+<td>1358 (54.5%)</td>
+</tr>
+<tr>
+<td class="rowlabel lastrow">Missing/Not Answered</td>
+<td class="lastrow">175 (13.8%)</td>
+<td class="lastrow">653 (100%)</td>
+<td class="lastrow">0 (0%)</td>
+<td class="lastrow">828 (33.2%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<pre><code>#&gt; R version 4.3.1 (2023-06-16)
+#&gt; Platform: x86_64-apple-darwin20 (64-bit)
+#&gt; Running under: macOS Monterey 12.6.9
+#&gt; 
+#&gt; Matrix products: default
+#&gt; BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib 
+#&gt; LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+#&gt; 
+#&gt; locale:
+#&gt; [1] C/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+#&gt; 
+#&gt; time zone: America/New_York
+#&gt; tzcode source: internal
+#&gt; 
+#&gt; attached base packages:
+#&gt; [1] stats     graphics  grDevices utils     datasets  methods   base     
+#&gt; 
+#&gt; other attached packages:
+#&gt;  [1] public.ctn0094data_1.0.6 psych_2.3.6              infer_1.0.4             
+#&gt;  [4] janitor_2.2.0            kableExtra_1.3.4         broom_1.0.5             
+#&gt;  [7] DiagrammeR_1.0.10        table1_1.4.3             ggthemes_4.2.4          
+#&gt; [10] forcats_1.0.0            tibble_3.2.1             ggplot2_3.4.2           
+#&gt; [13] dplyr_1.1.2              conflicted_1.2.0        
+#&gt; 
+#&gt; loaded via a namespace (and not attached):
+#&gt;  [1] gtable_0.3.3       xfun_0.39          bslib_0.5.0        htmlwidgets_1.6.2 
+#&gt;  [5] visNetwork_2.1.2   lattice_0.21-8     vctrs_0.6.3        tools_4.3.1       
+#&gt;  [9] generics_0.1.3     parallel_4.3.1     fansi_1.0.4        pkgconfig_2.0.3   
+#&gt; [13] RColorBrewer_1.1-3 webshot_0.5.5      lifecycle_1.0.3    compiler_4.3.1    
+#&gt; [17] stringr_1.5.0      munsell_0.5.0      mnormt_2.1.1       snakecase_0.11.1  
+#&gt; [21] htmltools_0.5.5    sass_0.4.6         yaml_2.3.7         Formula_1.2-5     
+#&gt; [25] pillar_1.9.0       jquerylib_0.1.4    tidyr_1.3.0        cachem_1.0.8      
+#&gt; [29] nlme_3.1-162       tidyselect_1.2.0   rvest_1.0.3        digest_0.6.32     
+#&gt; [33] stringi_1.7.12     purrr_1.0.1        fastmap_1.1.1      grid_4.3.1        
+#&gt; [37] colorspace_2.1-0   cli_3.6.1          magrittr_2.0.3     utf8_1.2.3        
+#&gt; [41] withr_2.5.0        scales_1.2.1       backports_1.4.1    lubridate_1.9.2   
+#&gt; [45] timechange_0.2.0   rmarkdown_2.22     httr_1.4.6         memoise_2.0.1     
+#&gt; [49] evaluate_0.21      knitr_1.43         viridisLite_0.4.2  rlang_1.1.1       
+#&gt; [53] glue_1.6.2         xml2_1.3.4         svglite_2.1.1      rstudioapi_0.14   
+#&gt; [57] jsonlite_1.8.5     R6_2.5.1           systemfonts_1.0.4</code></pre>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
